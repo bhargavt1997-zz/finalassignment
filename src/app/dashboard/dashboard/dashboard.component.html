@@ -1,8 +1,9 @@
-<div class="content">
-    <div class="courses">
-        <div class="headers">
+<div class="container">
+    <div class="main-courses col-8">
+
+        <div class="courses">
             <div class="allCourses">
-                <h3>All Courses</h3>
+                <h6>All Courses</h6>
             </div>
             <div class="filterCourses">
                 <select class="form-select" aria-label="Default select example">
@@ -11,21 +12,16 @@
                     <option value="2">High to Low</option>
                 </select>
             </div>
-            <app-courses></app-courses>
+
         </div>
+        <app-courses [courses]="CourseList"></app-courses>
     </div>
-    <div class="cart">
-        <div class="cartHeader">
-            <div class="searchCourses">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">Search</span>
-                    </div>
-                </div>
-            </div>
-            <app-cart></app-cart>
+
+    <div class=" cart col-4">
+        <div class="search">
+            <input type="text" placeholder="Search here.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
         </div>
+        <app-cart [courses]="CourseList"></app-cart>
     </div>
 </div>

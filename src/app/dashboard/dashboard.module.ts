@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CartComponent } from './cart/cart.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +13,12 @@ import { CartComponent } from './cart/cart.component';
     CartComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    HttpClientModule
+    
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class DashboardModule { }

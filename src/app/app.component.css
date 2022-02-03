@@ -14,8 +14,10 @@
 }
 .banner{
     background-color: rgb(3, 1, 20);
-    margin: 2% 0% 0% 10%;
-    width: 80%;
-    height: 5%;
+    margin: 10px auto 0;
+    width: 79%;
+    height: 70px;
     color: white;
+    padding: 10px 0 10px 10px;
+    border-radius: 3px;
 }

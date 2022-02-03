@@ -1,0 +1,17 @@
+.main{
+    height: 600px;
+  }
+  
+  .header{
+    margin: 10px auto;
+  }
+  .cart-value{
+    padding: 10px;
+  }
+  .footer p{
+    margin:0;
+  }
+  .card-details{
+      height: 370px;
+      overflow:scroll;
+  }
