@@ -1,1 +1,21 @@
-<p>cart works!</p>
+<div class="main card shadow">
+    <div class="header border-bottom">
+      <h6>YOUR CART DETAILS</h6>
+  
+    </div>
+    <div class="card-body card-details">
+        <div class="card" *ngFor="let item of CartItemstoDisplay">
+            <!-- <div class="card-body"> -->
+                <h5 class="card-title">{{item.courseDescription}}</h5>
+                <p class="card-text">Price : {{item.price}}</p>
+                <p class="card-text">Author : {{item.courseCreator}}</p>
+                <p class="card-text">Course ID : {{item.id}}</p>
+                <span>hi added in cart</span>
+            <!-- </div> -->
+        </div>
+    </div>
+    <br>
+  
+    <div class="card-footer">
+    </div>
+  </div>
