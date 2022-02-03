@@ -5,7 +5,7 @@
         <p class="card-text">Price : {{item.price}}</p>
         <p class="card-text">Author : {{item.courseCreator}}</p>
         <p class="card-text">Course ID : {{item.id}}</p>
-        <a  class="btn btn-primary"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
+        <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
         <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a>
     </div>
 </div>

@@ -1,17 +1,42 @@
 .main{
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .border-line{
+    border: 1px solid rgb(141, 138, 138);
+    /* width: 100%; */
   }
   
   .header{
     margin: 10px auto;
   }
-  .cart-value{
-    padding: 10px;
+  
+  .cart-details{
+    height:  370px;
+    overflow: scroll;
+  }
+  
+  
+  .checkout{
+    color:#FF6700;
+  }
+  
+  .cart-footer{
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  
+  .course-cart-card{
+    height: 70px;
+  }
+  
+  .card-footer, .card-header{
+    background-color: white;
   }
   .footer p{
     margin:0;
-  }
-  .card-details{
-      height: 370px;
-      overflow:scroll;
   }

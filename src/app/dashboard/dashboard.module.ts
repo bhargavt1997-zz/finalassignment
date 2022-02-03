@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     
   ],
+  exports:[CartComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
+import { WishlistModule } from './wishlist/wishlist.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    DashboardModule
+    DashboardModule,
+    WishlistModule
   ],
   providers: [],
   bootstrap: [AppComponent],

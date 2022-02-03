@@ -25,4 +25,7 @@ export class CoursesComponent implements OnInit {
   addToCart(id:String){
     this.CommonService.updateCart(id);
   }
+  addToWishlist(id:String){
+    this.CommonService.updateWishList(id);
+  }
 }

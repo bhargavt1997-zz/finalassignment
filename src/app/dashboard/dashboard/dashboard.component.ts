@@ -8,7 +8,7 @@ import { DashboardServiceService } from '../dashboard-service.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  CourseList:courses[] =[];;
+  CourseList:courses[] =[];
   constructor(private commonService:DashboardServiceService) {
     
    }

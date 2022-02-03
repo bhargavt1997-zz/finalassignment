@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="main-courses col-8">
+
+        <div class="courses">
+            <div class="allCourses">
+                <h6>All WishList</h6>
+            </div>
+            <div class="filterCourses">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Course Price</option>
+                    <option value="1">Low to high</option>
+                    <option value="2">High to Low</option>
+                </select>
+            </div>
+
+        </div>
+<!-- courses to be added in the wishlist -->
+    </div>
+
+    <div class=" cart col-4">
+        <app-cart [courses]="CourseList"></app-cart>
+    </div>
+</div>
