@@ -6,30 +6,30 @@ import { ProfileComponent } from './profile/profile/profile.component';
 import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
 
 const routes: Routes = [
-{
-  path:"dashboard",
-  component:DashboardComponent
-},
-{
-  path:"wishlist",
-  component:WishlistComponent
-},
-{
-  path:"courseDetail/:courseId",
-  component:CourseDetailComponent
-},
-{
-  path:"**",
-  component:DashboardComponent
-},
-{
-  path:"profile",
-  component:ProfileComponent
-}
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+  {
+    path: 'wishlist',
+    component: WishlistComponent,
+  },
+  {
+    path: 'courseDetail/:courseId',
+    component: CourseDetailComponent,
+  },
+  {
+    path: '**',
+    component: DashboardComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

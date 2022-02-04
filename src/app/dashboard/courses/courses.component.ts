@@ -11,22 +11,25 @@ import { DashboardServiceService } from '../dashboard-service.service';
 export class CoursesComponent implements OnInit {
   showStar: any;
   @Input() courses: courses[] = [];
-  constructor(private CommonService: DashboardServiceService,private router:Router) {}
+  constructor(
+    private CommonService: DashboardServiceService,
+    private router: Router
+  ) {}
   ngOnInit(): void {
     this.showStar = this.CommonService.showStar;
   }
-  ngDoCheck(){
+  ngDoCheck() {
     this.ngOnInit();
   }
   addToCart(id: any) {
     this.CommonService.updateCart(id);
   }
   async addToWishlist(id: any) {
-  await  this.CommonService.updateWishList(id);
+    await this.CommonService.updateWishList(id);
     this.showStar = this.CommonService.showStar;
     this.showStar[id] = !this.showStar[id];
   }
-  GotoCourseDetails(id:any){
-    this.router.navigateByUrl("/courseDetail/"+id);
+  GotoCourseDetails(id: any) {
+    this.router.navigateByUrl('/courseDetail/' + id);
   }
 }

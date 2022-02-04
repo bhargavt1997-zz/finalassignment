@@ -5,20 +5,20 @@ import { DashboardServiceService } from 'src/app/dashboard/dashboard-service.ser
 @Component({
   selector: 'app-wishlist-courses',
   templateUrl: './wishlist-courses.component.html',
-  styleUrls: ['./wishlist-courses.component.css']
+  styleUrls: ['./wishlist-courses.component.css'],
 })
 export class WishlistCoursesComponent implements OnInit {
   WishListItems: any = [];
   @Input() courses: courses[] = [];
   wishListToDisplay: courses[] = [];
-  showStar:any;
+  showStar: any;
   ngOnInit(): void {
     this.getCartList();
   }
   ngDoCheck() {
     this.getCartList();
   }
-  constructor(private commonService:DashboardServiceService){}
+  constructor(private commonService: DashboardServiceService) {}
   getCartList() {
     this.wishListToDisplay = [];
     this.WishListItems = this.commonService.wishList;
@@ -28,12 +28,12 @@ export class WishlistCoursesComponent implements OnInit {
       }
     });
   }
-  deleteFromWishList(id:any){
+  deleteFromWishList(id: any) {
     this.commonService.updateWishList(id);
-      this.showStar = this.commonService.showStar;
-      this.showStar[id] = !this.showStar[id];
+    this.showStar = this.commonService.showStar;
+    this.showStar[id] = !this.showStar[id];
   }
-  updateCartFromWishList(id:any){
+  updateCartFromWishList(id: any) {
     this.commonService.updateCartFromWhisList(id);
   }
 }

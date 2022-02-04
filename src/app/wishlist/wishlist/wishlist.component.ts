@@ -5,20 +5,19 @@ import { DashboardServiceService } from 'src/app/dashboard/dashboard-service.ser
 @Component({
   selector: 'app-wishlist',
   templateUrl: './wishlist.component.html',
-  styleUrls: ['./wishlist.component.css']
+  styleUrls: ['./wishlist.component.css'],
 })
 export class WishlistComponent implements OnInit {
-
-  CourseList:courses[]=[];
-  constructor(private commonService:DashboardServiceService){}
+  CourseList: courses[] = [];
+  constructor(private commonService: DashboardServiceService) {}
   ngOnInit(): void {
     this.getCourses();
   }
   getCourses() {
-    this.commonService.getCoursesData().subscribe((res:any)=>{
-      res.forEach((element:any) => {
+    this.commonService.getCoursesData().subscribe((res: any) => {
+      res.forEach((element: any) => {
         this.CourseList.push(element);
       });
-    })
+    });
   }
 }

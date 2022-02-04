@@ -16,7 +16,6 @@ export class CourseDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private commonService: DashboardServiceService
   ) {}
-
   date = new Date();
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
