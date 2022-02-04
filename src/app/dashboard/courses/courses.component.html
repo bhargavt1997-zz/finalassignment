@@ -10,7 +10,7 @@
             <p class="author">{{item.courseCreator}}</p>
         </div>
         <div class="vertically-center">
-            <button class="btn btn-primary-common btnclass" (click)="addToWishlist(item.id)">ADD TO WishList</button>
+            <img src="{{showStar[item.id]? '../../../../../assets/notGlown.png':'../../../assets/glow.png'}}" type="button" (click)="addToWishlist(item.id)" >
         </div>
         <div class="vertically-center">
             <!-- <p class="discount-price">{{item.price | discount:item.discount}}/-</p> -->

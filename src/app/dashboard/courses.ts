@@ -1,6 +1,6 @@
 export interface courses {
   num: number;
-  id: String;
+  id: number;
   courseCreator: String;
   courseDescription: String;
   discount: number;

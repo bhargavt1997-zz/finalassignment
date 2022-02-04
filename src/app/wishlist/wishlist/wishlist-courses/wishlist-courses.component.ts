@@ -30,4 +30,7 @@ export class WishlistCoursesComponent implements OnInit {
   deleteFromWishList(id:any){
     this.commonService.removeFromWishList(id);
   }
+  updateCartFromWishList(id:any){
+    this.commonService.updateCartFromWhisList(id);
+  }
 }

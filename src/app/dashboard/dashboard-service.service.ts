@@ -7,6 +7,12 @@ import { courses } from './courses';
   providedIn: 'root',
 })
 export class DashboardServiceService {
+  updateCartFromWhisList(id: any) {
+    this.wishList = this.wishList.filter(function (item: String) {
+      return item !== id;
+    });
+    this.updateCart(id);
+  }
   cart: any = [];
   wishList: any = [];
   updateWishList(id: String) {
