@@ -14,7 +14,7 @@ export class DashboardServiceService {
       alert('already added in the WishList');
     } else {
       this.wishList.push(id);
-      console.log(this.wishList);
+      console.log(this.wishList,"wishlist in service");
     }
   }
 

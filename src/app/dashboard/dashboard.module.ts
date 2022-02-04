@@ -4,19 +4,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     CoursesComponent,
-    CartComponent,
-    CourseDetailComponent
+    CartComponent
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+
     
   ],
   exports:[CartComponent],

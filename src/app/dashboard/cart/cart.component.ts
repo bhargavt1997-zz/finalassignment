@@ -22,6 +22,7 @@ export class CartComponent implements OnInit {
   }
   getCartList() {
     this.CartItemstoDisplay = [];
+    this.totalCartPrice = 0;
     this.cartItems = this.commonService.cart;
     this.courses.filter((item) => {
       if (this.cartItems.includes(item.id)) {

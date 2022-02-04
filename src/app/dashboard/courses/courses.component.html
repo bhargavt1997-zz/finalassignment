@@ -1,15 +1,3 @@
-<!-- <div class="courses" *ngFor="let item of courses">
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">{{item.courseDescription}}</h5>
-        <p class="card-text">Price : {{item.price}}</p>
-        <p class="card-text">Author : {{item.courseCreator}}</p>
-        <p class="card-text">Course ID : {{item.id}}</p>
-        <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
-        <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a>
-    </div>
-</div>
-</div> -->
 <div class="courses" *ngFor="let item of courses">
 <div class="course-card" attr.data-id="{{item.id}}">
     <div class="square"></div>
@@ -20,11 +8,12 @@
     <div class="other-details">
         <div class="vertically-center">
             <p class="author">{{item.courseCreator}}</p>
-        </div> 3
+        </div>
         <div class="vertically-center">
             <button class="btn btn-primary-common btnclass" (click)="addToWishlist(item.id)">ADD TO WishList</button>
         </div>
         <div class="vertically-center">
+            <!-- <p class="discount-price">{{item.price | discount:item.discount}}/-</p> -->
             <p class="discount-price">{{item.price}}/-</p>
         </div>
         <div class="vertically-center">

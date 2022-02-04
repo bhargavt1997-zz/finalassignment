@@ -17,8 +17,9 @@ import { WishlistModule } from './wishlist/wishlist.module';
     AppRoutingModule,
     NgbModule,
     DashboardModule,
-    WishlistModule
+    WishlistModule,
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
