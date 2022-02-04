@@ -15,6 +15,7 @@ export class WishlistComponent implements OnInit {
   WishListDisplay:courses[]=[];
   ngOnInit(): void {
     this.getCourses();
+    this.getWishlistData();
   }
   getCourses() {
     this.DashboardService.getCoursesData().subscribe((res:any)=>{
@@ -22,10 +23,12 @@ export class WishlistComponent implements OnInit {
         this.CourseList.push(element);
       });
     })
+    console.log(this.CourseList,"inside wishlist");
   }
   getWishlistData(){
     this.WishListDisplay = [];
-    this.wishListItems = this.DashboardService.cart;
+    this.wishListItems = this.DashboardService.wishList;
+    console.log(this.wishListItems);
     this.CourseList.filter((item) => {
       // if (this.wishListItems.includes(item.id)) {
       //   this.WishListDisplay.push(item);
