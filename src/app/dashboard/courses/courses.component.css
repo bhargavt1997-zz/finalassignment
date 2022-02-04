@@ -97,24 +97,8 @@
     color: white;
     font-size:  10px;
   }
-  
-  
-  /* .row{
-    display: flex;
-  } */
-  
-  
-  /* .btn-cart{
-    height: 30px;
-    border-style: none;
-    border-radius: 5px;
-  } */
-  /* .courses{
-    margin-bottom: 10px;
-    height: 550px;
-    overflow: auto;
+  .starIcon{
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
   }
-  
-  .item-course{
-    height: 23.5%;
-  } */

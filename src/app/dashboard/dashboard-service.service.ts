@@ -15,9 +15,12 @@ export class DashboardServiceService {
   }
   cart: any = [];
   wishList: any = [];
+  showStar = Array(10).fill('false');
   updateWishList(id: String) {
     if (this.wishList.includes(id)) {
-      alert('already added in the WishList');
+      this.wishList = this.wishList.filter(function (item: String) {
+        return item !== id;
+      });
     } else {
       this.wishList.push(id);
     }
