@@ -7,10 +7,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
 import { WishlistModule } from './wishlist/wishlist.module';
+import { ValidityCheckPipe } from './validity-check.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ValidityCheckPipe
   ],
   imports: [
     BrowserModule,

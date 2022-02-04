@@ -28,7 +28,7 @@ export class WishlistCoursesComponent implements OnInit {
     });
   }
   deleteFromWishList(id:any){
-    this.commonService.removeFromWishList(id);
+    this.commonService.updateWishList(id);
   }
   updateCartFromWishList(id:any){
     this.commonService.updateCartFromWhisList(id);

@@ -42,15 +42,15 @@
         </div>
         <div class="course-price">
             <br />
-            Price Rs -
+            Price Rs - {{item.price}}
             <br />
-            Discount time left
+            Discount time left {{item.discountValidTill }}
             <br />
-            <a class="btn btn-primary"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-primary"> Add to Cart</a>
+            <!-- <a class="btn btn-primary"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary"> Add to Cart</a> -->
 
-            <!-- <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
-        <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a> -->
+            <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
+        <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a>
         </div>
 
 
