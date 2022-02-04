@@ -15,11 +15,11 @@ export class DashboardServiceService {
   }
   cart: any = [];
   wishList: any = [];
-  showStar = Array(7).fill(true);
+  showStar = Array(10).fill(true);
   updateWishList(id: number) {
     if (this.wishList.includes(id)) {
       this.wishList = this.wishList.filter((item: number) => item != id);
-      this.showStar[id] = !this.showStar[id];
+      this.showStar[id] == !(this.showStar[id]);
     } else {
       this.wishList.push(id);
     }

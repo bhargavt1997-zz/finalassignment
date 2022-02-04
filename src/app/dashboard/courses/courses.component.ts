@@ -15,11 +15,15 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
     this.showStar = this.CommonService.showStar;
   }
+  ngDoCheck(){
+    this.ngOnInit();
+  }
   addToCart(id: any) {
     this.CommonService.updateCart(id);
   }
-  addToWishlist(id: any) {
-    this.CommonService.updateWishList(id);
+  async addToWishlist(id: any) {
+  await  this.CommonService.updateWishList(id);
+    this.showStar = this.CommonService.showStar;
     this.showStar[id] = !this.showStar[id];
   }
   GotoCourseDetails(id:any){

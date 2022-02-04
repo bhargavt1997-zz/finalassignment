@@ -9,6 +9,7 @@
       <ul class="list-group">
         <li class="list-group-item border-0 p-0">
 
+          <div *ngIf="totalCartPrice!=0;else other_content">
             <div  class="card course-cart-card mb-3 border-0" *ngFor="let item of CartItemstoDisplay">
                 <div class="border-line mt-2 mb-3" ></div>
               <div class="course-data">
@@ -20,7 +21,11 @@
                 </div>
                 <div class="course-price d-flex justify-content-end pb-2 mr-4">{{item.price}}</div>
             </div>
-            <!-- <div class="border-line mt-2 mb-3" ></div> -->
+          </div>
+            <ng-template #other_content>
+              <h2> No Items in the cart</h2>
+            </ng-template>
+
           </li>
         </ul>
       </div>

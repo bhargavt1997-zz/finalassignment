@@ -11,6 +11,7 @@ export class WishlistCoursesComponent implements OnInit {
   WishListItems: any = [];
   @Input() courses: courses[] = [];
   wishListToDisplay: courses[] = [];
+  showStar:any;
   ngOnInit(): void {
     this.getCartList();
   }
@@ -29,6 +30,8 @@ export class WishlistCoursesComponent implements OnInit {
   }
   deleteFromWishList(id:any){
     this.commonService.updateWishList(id);
+      this.showStar = this.commonService.showStar;
+      this.showStar[id] = !this.showStar[id];
   }
   updateCartFromWishList(id:any){
     this.commonService.updateCartFromWhisList(id);
