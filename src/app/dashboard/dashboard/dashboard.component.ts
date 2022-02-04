@@ -10,9 +10,7 @@ import { DashboardServiceService } from '../dashboard-service.service';
 export class DashboardComponent implements OnInit {
   CourseList:courses[] =[];
   constructor(private commonService:DashboardServiceService) {
-    
    }
-
   ngOnInit(): void {
     this.getCourses();
   }

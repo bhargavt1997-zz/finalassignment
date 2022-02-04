@@ -1,4 +1,4 @@
-<div class="courses" *ngFor="let item of courses">
+<!-- <div class="courses" *ngFor="let item of courses">
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">{{item.courseDescription}}</h5>
@@ -9,4 +9,30 @@
         <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a>
     </div>
 </div>
+</div> -->
+<div class="courses" *ngFor="let item of courses">
+<div class="course-card" attr.data-id="{{item.id}}">
+    <div class="square"></div>
+    <div class="title-container">
+        <p class="title">{{item.title}}</p>
+        <span class="badge badge-color" *ngFor="let tag of item.tags">{{tag}}</span>
+    </div>
+    <div class="other-details">
+        <div class="vertically-center">
+            <p class="author">{{item.courseCreator}}</p>
+        </div> 3
+        <div class="vertically-center">
+            <button class="btn btn-primary-common btnclass" (click)="addToWishlist(item.id)">ADD TO WishList</button>
+        </div>
+        <div class="vertically-center">
+            <p class="discount-price">{{item.price}}/-</p>
+        </div>
+        <div class="vertically-center">
+            <p class="original-price">{{item.price}}/-</p>
+        </div>
+        <div class="vertically-center">
+            <button class="btn btn-primary-common btnclass" (click)="addToCart(item.id)">ADD TO CART</button>
+        </div>
+    </div>
+  </div>
 </div>
