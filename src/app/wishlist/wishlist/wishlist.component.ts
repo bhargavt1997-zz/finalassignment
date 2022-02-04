@@ -10,9 +10,9 @@ import { DashboardServiceService } from 'src/app/dashboard/dashboard-service.ser
 export class WishlistComponent implements OnInit {
 
   constructor(private DashboardService:DashboardServiceService) { }
-  CourseList: any = [];
+  CourseList:courses[] =[];
   wishListItems =[];
-  
+  WishListDisplay:courses[]=[];
   ngOnInit(): void {
     this.getCourses();
   }
@@ -24,14 +24,13 @@ export class WishlistComponent implements OnInit {
     })
   }
   getWishlistData(){
-    // this.wishListItems = [];
-    // this.wishListItems = this.DashboardService.wishList;
-    // this.CourseList.filter((item) => {
-    //   if (this.wishListItems.includes(item.id)) {
-    //     this.CartItemstoDisplay.push(item);
-    //     this.totalCartPrice += item.price;
-    //   }
-    // });
+    this.WishListDisplay = [];
+    this.wishListItems = this.DashboardService.cart;
+    this.CourseList.filter((item) => {
+      // if (this.wishListItems.includes(item.id)) {
+      //   this.WishListDisplay.push(item);
+      // }
+    });
   }
   
 }

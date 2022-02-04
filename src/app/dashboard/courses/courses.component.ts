@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { courses } from '../courses';
 import { DashboardServiceService } from '../dashboard-service.service';
 
@@ -9,18 +9,9 @@ import { DashboardServiceService } from '../dashboard-service.service';
 })
 export class CoursesComponent implements OnInit {
 
-  courses:courses[] =[];
+  @Input() courses:courses[] =[];
   constructor(private CommonService:DashboardServiceService) { }
-
   ngOnInit(): void {
-    this.getCourses();
-  }
-  getCourses() {
-    this.CommonService.getCoursesData().subscribe((res:any)=>{
-      res.forEach((element:any) => {
-        this.courses.push(element);
-      });
-    })
   }
   addToCart(id:String){
     this.CommonService.updateCart(id);

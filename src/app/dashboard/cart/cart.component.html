@@ -1,27 +1,38 @@
 <div class="main card shadow">
 
     <div class="header card-header">
-        <h6>YOUR CART DETAILS</h6>
+      <h6>YOUR CART DETAILS</h6>
     </div>
-
+  
     <div class="card-body course-cart-body">
-        <div class="cart-details">
-            <div class="card" *ngFor="let item of CartItemstoDisplay">
-                <h5 class="card-title">{{item.courseDescription}}</h5>
-                <p class="card-text">Price : {{item.price}}</p>
-                <p class="card-text">Author : {{item.courseCreator}}</p>
-                <p class="card-text">Course ID : {{item.id}}</p>
-                <span>hi added in cart</span>
+      <div class="cart-details">
+      <ul class="list-group">
+        <li class="list-group-item border-0 p-0">
+
+            <div  class="card course-cart-card mb-3 border-0" *ngFor="let item of CartItemstoDisplay">
+                <div class="border-line mt-2 mb-3" ></div>
+              <div class="course-data">
+                <div class="square"></div>
+                <div class="course-name">
+                  <p>
+                    {{item.courseDescription}}
+                  </p> </div>
+                </div>
+                <div class="course-price d-flex justify-content-end pb-2 mr-4">{{item.price}}</div>
             </div>
-        </div>
+            <!-- <div class="border-line mt-2 mb-3" ></div> -->
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="card-footer cart-footer p-3">
-        <div class="cart-value">
-            <p>Total Cart Value</p>
-            <p class="value font-weight-bold"> {{totalCartPrice}}</p>
-        </div>
-        <div class="checkout pt-3 ">
-            <button  class="btn btn-warning" [disabled]="totalCartPrice === 0"> GO TO CHECKOUT</button>
-        </div>
+    <div class="cart-value" >
+        <p>Total Cart Value</p>
+        <p class="value font-weight-bold"> {{totalCartPrice}}</p>
     </div>
-</div>
+    <div class="checkout pt-3 ">
+        <button  class="btn btn-warning" [disabled]="totalCartPrice === 0"> GO TO CHECKOUT</button>
+    </div>
+    </div>
+  </div>
+  
