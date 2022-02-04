@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { courses } from '../courses';
 import { DashboardServiceService } from '../dashboard-service.service';
 
@@ -10,7 +11,7 @@ import { DashboardServiceService } from '../dashboard-service.service';
 export class CoursesComponent implements OnInit {
   showStar: any;
   @Input() courses: courses[] = [];
-  constructor(private CommonService: DashboardServiceService) {}
+  constructor(private CommonService: DashboardServiceService,private router:Router) {}
   ngOnInit(): void {
     this.showStar = this.CommonService.showStar;
   }
@@ -20,5 +21,8 @@ export class CoursesComponent implements OnInit {
   addToWishlist(id: any) {
     this.CommonService.updateWishList(id);
     this.showStar[id] = !this.showStar[id];
+  }
+  GotoCourseDetails(id:any){
+    this.router.navigateByUrl("/courseDetail/"+id);
   }
 }

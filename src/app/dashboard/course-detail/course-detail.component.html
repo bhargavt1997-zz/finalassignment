@@ -1,54 +1,58 @@
+<div class="runner" *ngFor="let item of courses">
+    <div class="container">
 
-<div class="container">
-
-    <div class="allCourses">
-        <h6>All Courses > </h6>
-        <!-- <h6>{courseName}</h6>  -->
-    </div>
-    <div class="course-details">
-        <div class="sd">
-            <h5>course full Name</h5>
-            <br />
-            <h6>course full Name</h6>
-            <br />
-            <h6>Author Name </h6>
-            <br/>
-            <a  class="btn btn-primary"> React</a>
-            <a  class="btn btn-primary"> React</a>
-            <a  class="btn btn-primary"> React</a>
+        <div class="allCourses">
+            <a>All Courses > {{ item.id}}</a>
+            <br>
+            <h6>Title : {{item.title}}</h6>
         </div>
-    </div>
-    <div class="video">
-        <iframe width="390" height="315" src="https://www.youtube.com/embed?v=kuJNVKHHpGk&feature=youtu.be">
-        </iframe>
-    </div>
-    <div class="course-description col-8">
-        <b>Course Details</b>
-        <br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br /><br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-    </div>
-    <div class="course-price">
-        <br/>
-        Price Rs -
-        <br/>
-        Discount time left 
-        <br/>
-        <a  class="btn btn-primary" > Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
-        <a  class="btn btn-primary" > Add to Cart</a>
-        
-        <!-- <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
+        <div class="course-details">
+            <div class="sd">
+                <h5>Course Description : {{item.courseDescription}}</h5>
+                <br />
+                <h6>Course Author: {{item.courseCreator}} </h6>
+                <br />
+                <div *ngFor="let items of item.tags">
+                    <a class="btn btn-primary">{{items}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="390" height="315" src="https://www.youtube.com/embed?v=kuJNVKHHpGk&feature=youtu.be">
+            </iframe>
+        </div>
+        <div class="course-description col-8">
+            <b>Course Details</b>
+            <br /><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+            <br /><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+            <br /><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+            <br /><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.
+        </div>
+        <div class="course-price">
+            <br />
+            Price Rs -
+            <br />
+            Discount time left
+            <br />
+            <a class="btn btn-primary"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-primary"> Add to Cart</a>
+
+            <!-- <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
         <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a> -->
+        </div>
+
+
     </div>
-
-
 </div>
