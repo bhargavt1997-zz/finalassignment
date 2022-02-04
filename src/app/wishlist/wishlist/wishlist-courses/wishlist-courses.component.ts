@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { courses } from 'src/app/dashboard/courses';
+import { DashboardServiceService } from 'src/app/dashboard/dashboard-service.service';
 
 @Component({
   selector: 'app-wishlist-courses',
@@ -7,11 +8,26 @@ import { courses } from 'src/app/dashboard/courses';
   styleUrls: ['./wishlist-courses.component.css']
 })
 export class WishlistCoursesComponent implements OnInit {
-
-  @Input() courses:courses[]=[];
-  constructor() { }
-
+  WishListItems: any = [];
+  @Input() courses: courses[] = [];
+  wishListToDisplay: courses[] = [];
   ngOnInit(): void {
+    this.getCartList();
   }
-
+  ngDoCheck() {
+    this.getCartList();
+  }
+  constructor(private commonService:DashboardServiceService){}
+  getCartList() {
+    this.wishListToDisplay = [];
+    this.WishListItems = this.commonService.wishList;
+    this.courses.filter((item) => {
+      if (this.WishListItems.includes(item.id)) {
+        this.wishListToDisplay.push(item);
+      }
+    });
+  }
+  deleteFromWishList(id:any){
+    this.commonService.removeFromWishList(id);
+  }
 }

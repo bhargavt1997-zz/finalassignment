@@ -14,7 +14,6 @@ export class DashboardServiceService {
       alert('already added in the WishList');
     } else {
       this.wishList.push(id);
-      console.log(this.wishList,"wishlist in service");
     }
   }
 
@@ -23,10 +22,13 @@ export class DashboardServiceService {
       alert('already added in the cart');
     } else {
       this.cart.push(id);
-      console.log(this.cart);
     }
   }
-
+  removeFromWishList(id: String) {
+    this.wishList = this.wishList.filter(function (item: String) {
+      return item !== id;
+    });
+  }
   constructor(private http: HttpClient) {}
   public url = './assets/courses.json';
   getCoursesData(): Observable<courses> {
