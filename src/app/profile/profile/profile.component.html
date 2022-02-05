@@ -1,120 +1,140 @@
+
 <div class="container">
-    <div class="child-1">
+    <div class="child-1 col-2">
         <img src="../../../assets/Person.png" class="image">
     </div>
     <div class="child-2">
         <form>
             <div class="rowFlex">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Display Name</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Display Name">
-           
-            </div>
-            &nbsp; &nbsp; &nbsp;
-            <div class="form-group">
-              <label for="exampleInputPassword1">First Name</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="FirstName">
-            </div>
-            &nbsp; &nbsp; &nbsp;
-            <div class="form-group">
-              <label for="exampleInputPassword1">Last Name</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div class="checkBox">
-                 <small id="emailHelp" class="form-text text-muted">Your Area of Interest</small>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check1" name="option1" value="Designer" checked>
-                <label class="form-check-label" for="check1">Designer</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="Developer">
-                <label class="form-check-label" for="check2">Developer</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check1" name="option3" value="ProjectManager" checked>
-                <label class="form-check-label" for="check1">Project Manager</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check2" name="option4" value="Sales">
-                <label class="form-check-label" for="check2">sales</label>
-              </div>
-        </div>
-        <br>
-        <div class="radioButton">
-            <small id="emailHelp" class="form-text text-muted">Are you a student or Professional</small>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
-                  Student
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  Professional
-                </label>
-              </div>
-        </div>
-        <br>
+                <div class="col-8">
+                    <div class="form-group name col-md-4">
+                        <label for="exampleInputPassword1">Last Name</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group name col-md-4">
+                        <label for="exampleInputPassword1">First Name</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group name col-md-4">
+                        <label for="exampleInputEmail1">Display Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Display Name">
 
-        <div class="radibuttonInline">
-            <div class="experience">
-            <small id="radioHelp" class="form-text text-muted">How much of experience you have?</small>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="radibuttonInline" id="radibuttonInline1" value="option1" checked>
-                <label class="form-check-label" for="radibuttonInline1">
-                  0-5
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radibuttonInline" id="radibuttonInline2" value="option2">
-                <label class="form-check-label" for="radibuttonInline2">
-                  5-10
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radibuttonInline" id="radibuttonInline2" value="option2">
-                <label class="form-check-label" for="radibuttonInline2">
-                  10 & above
-                </label>
-              </div>
+                    </div>
+                    &nbsp; &nbsp; &nbsp;
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">About yourself</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="checkBox">
+                        <small id="emailHelp" class="form-text text-muted">Your Area of Interest</small>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="Designer"
+                                checked>
+                            <label class="form-check-label" for="check1">Designer</label>
+                        </div>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                value="Developer">
+                            <label class="form-check-label" for="check2">Developer</label>
+                        </div>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option3"
+                                value="ProjectManager" checked>
+                            <label class="form-check-label" for="check1">Project Manager</label>
+                        </div>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option4" value="Sales">
+                            <label class="form-check-label" for="check2">sales</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="radioButton">
+                        <small id="emailHelp" class="form-text text-muted">Are you a student or Professional</small>
+                        <div class="form-check interest">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Student
+                            </label>
+                        </div>
+                        <div class="form-check interest">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Professional
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="radibuttonInline">
+                        <div class="profileexperience">
+                            <small id="radioHelp" class="form-text text-muted">How much of experience you have?</small>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline1"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    10 & above
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline1"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    5-10
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                
+                                <input class="form-check-input" type="radio" name="radibuttonInline1"
+                                    id="radibuttonInline1" value="option1" checked>
+                                <label class="form-check-label" for="radibuttonInline1">
+                                    0-5
+                                </label>
+                            </div>
+                        </div>
+                        &nbsp; &nbsp; &nbsp;
+                        <br>
+                        <div class="expertise">
+                            <small id="radioHelp" class="form-text text-muted">What is your expertise</small>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline"
+                                    id="radibuttonInline1" value="option1" checked>
+                                <label class="form-check-label" for="radibuttonInline1">
+                                    Java
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    React
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    Backend
+                                </label>
+                            </div>
+                        </div>
+                        &nbsp; 
+                    </div>
+                    <div class="mentionRole">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mention your role</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Add text">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br>
-            <div class="expertise">
-                <small id="radioHelp" class="form-text text-muted">What is your expertise</small>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radibuttonInline" id="radibuttonInline1" value="option1" checked>
-                    <label class="form-check-label" for="radibuttonInline1">
-                      Java
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radibuttonInline" id="radibuttonInline2" value="option2">
-                    <label class="form-check-label" for="radibuttonInline2">
-                      React
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radibuttonInline" id="radibuttonInline2" value="option2">
-                    <label class="form-check-label" for="radibuttonInline2">
-                      Backend
-                    </label>
-                  </div>
-            </div>
-        </div>
-        <br>
-        <div class="mentionRole">
-            <div class="form-group">
-                <label for="exampleInputPassword1">Mention your role</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="FirstName">
-              </div>
-        </div>
             <button type="submit" class="btn btn-primary">Save</button>
-          </form>
+        </form>
     </div>
 </div>

@@ -11,7 +11,6 @@ import { ValidityCheckPipe } from './validity-check.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    ValidityCheckPipe,
   ],
   imports: [
     BrowserModule,

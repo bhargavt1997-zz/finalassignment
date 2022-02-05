@@ -11,6 +11,7 @@ import { DashboardServiceService } from '../dashboard-service.service';
 export class CoursesComponent implements OnInit {
   showStar: any;
   show = true;
+  pageFrom:any;
   @Input() courses: courses[] = [];
   constructor(
     private CommonService: DashboardServiceService,
@@ -18,6 +19,7 @@ export class CoursesComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.showStar = this.CommonService.showStar;
+    this.pageFrom = this.CommonService.pageFrom;
   }
   ngDoCheck() {
     this.ngOnInit();
@@ -36,5 +38,8 @@ export class CoursesComponent implements OnInit {
   }
   closeModel() {
     this.show = !this.show;
+  }
+  deleteFromWishList(id:any){
+
   }
 }

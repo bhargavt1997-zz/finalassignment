@@ -9,6 +9,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { DiscountPipe } from '../discount.pipe';
 import { PaginationModule } from '../pagination/pagination.module';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ValidityCheckPipe } from '../validity-check.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CartComponent,
     CourseDetailComponent,
     DiscountPipe,
-    CheckoutComponent
+    CheckoutComponent,
   ],
   imports: [
     CommonModule,
