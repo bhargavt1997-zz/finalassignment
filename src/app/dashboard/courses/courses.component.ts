@@ -26,7 +26,6 @@ export class CoursesComponent implements OnInit {
   }
   addToCart(id: any) {
     this.CommonService.updateCart(id);
-    this.show = !this.show;
   }
   async addToWishlist(id: any) {
     await this.CommonService.updateWishList(id);
@@ -35,11 +34,5 @@ export class CoursesComponent implements OnInit {
   }
   GotoCourseDetails(id: any) {
     this.router.navigateByUrl('/courseDetail/' + id);
-  }
-  closeModel() {
-    this.show = !this.show;
-  }
-  deleteFromWishList(id:any){
-
   }
 }

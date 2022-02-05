@@ -14,6 +14,7 @@ export class CourseDetailComponent implements OnInit {
   courses: courses[] = [];
   constructor(
     private route: ActivatedRoute,
+    private router:Router,
     private commonService: DashboardServiceService
   ) {}
   date = new Date();
@@ -35,5 +36,8 @@ export class CourseDetailComponent implements OnInit {
   }
   addToCart(id: any) {
     this.commonService.updateCart(id);
+  }
+  goToAllCourses(){
+  this.router.navigateByUrl("/dashboard");
   }
 }
