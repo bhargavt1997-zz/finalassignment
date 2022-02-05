@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.child-1 {
+    width: 20%;
+    border: 1px solid black;
+    height: 10rem;
+}
+
+.child-2 {
+    width: 80%;
+    height: 10rem;
+    border: 1px solid black;
+    margin-left: 10px;
+
+}
+.image{
+    height: 100%;
+    width: 100%;
+}
+.rowFlex{
+    display: flex;
+    flex-direction: row;
+}

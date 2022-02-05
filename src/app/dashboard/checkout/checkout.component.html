@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col-8 right-padding">
+            <div class="page-title-sorting">
+                <!-- <p>{{ cartCourseList.length }} Course in Cart</p> -->
+            </div>
+            <p>Courses in Cart</p>
+            <!-- <div *ngFor="let course of courseListByPage" class="course-card"> -->
+                <app-courses renderingPlace="checkout" [courses]="CartItemstoDisplay"></app-courses>
+            <!-- </div> -->
+            <div class="shadow p-3 mb-2 bg-body rounded">
+                <p>Recommended Courses</p>
+                <!-- <div *ngFor="let course of recommendedCourses" class="course-card"> -->
+                    <app-courses renderingPlace="recommend" [courses]="CourseList"></app-courses>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-4 left-padding">
+            <div class="shadow p-3 mt-5 mb-2 bg-body rounded">
+                <p class="total-title">Total Amount</p>
+                <p class="total-price">Rs {{ totalCartPrice }}/-</p>
+                <p class="your-saving">You have saved Rs {{totalCartPriceOriginal}}/-</p><button class="btn btn-checkout"
+                    (click)="clickCheckOut()" [disabled]="CartItemstoDisplay.length === 0">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+</div>

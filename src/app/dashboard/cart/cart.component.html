@@ -18,7 +18,7 @@
                   </p>
                 </div>
               </div>
-              <div class="course-price d-flex justify-content-end pb-2 mr-4">{{item.price}}</div>
+              <div class="course-price d-flex justify-content-end pb-2 mr-4">{{item.price | discount:item.discount}}</div>
             </div>
           </div>
           <ng-template #other_content>
@@ -34,7 +34,7 @@
       <p class="value font-weight-bold"> {{totalCartPrice}}</p>
     </div>
     <div class="checkout pt-3 ">
-      <button class="btn btn-primary btncolor" [disabled]="totalCartPrice === 0"> GO TO CHECKOUT</button>
+      <button class="btn btn-primary btncolor" (click)="navigateToCheckout()" [disabled]="totalCartPrice === 0"> GO TO CHECKOUT</button>
     </div>
   </div>
 </div>

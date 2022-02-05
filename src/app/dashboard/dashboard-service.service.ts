@@ -7,6 +7,7 @@ import { courses } from './courses';
   providedIn: 'root',
 })
 export class DashboardServiceService {
+  
   updateCartFromWhisList(id: any) {
     this.wishList = this.wishList.filter(function (item: String) {
       return item !== id;
@@ -39,4 +40,10 @@ export class DashboardServiceService {
   getCoursesData(): Observable<courses> {
     return this.http.get<courses>(this.url);
   }
+  emptyCart() {
+   
+    alert('Thanks for placing the order');
+    this.cart=[];
+    
+      }
 }

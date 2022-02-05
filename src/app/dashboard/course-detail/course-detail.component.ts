@@ -30,6 +30,10 @@ export class CourseDetailComponent implements OnInit {
       });
     });
   }
-  addToWishlist(id: any) {}
-  addToCart(id: any) {}
+  addToWishlist(id: any) {
+   this.commonService.updateWishList(id);
+  }
+  addToCart(id: any) {
+    this.commonService.updateCart(id);
+  }
 }
