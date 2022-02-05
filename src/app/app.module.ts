@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
 import { WishlistModule } from './wishlist/wishlist.module';
 import { ValidityCheckPipe } from './validity-check.pipe';
+import { DiscountPipe } from './discount.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ValidityCheckPipe
+    ValidityCheckPipe,
   ],
   imports: [
     BrowserModule,

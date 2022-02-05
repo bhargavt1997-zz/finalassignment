@@ -19,13 +19,14 @@ const routes: Routes = [
     component: CourseDetailComponent,
   },
   {
-    path: '**',
-    component: DashboardComponent,
-  },
-  {
     path: 'profile',
     component: ProfileComponent,
   },
+  {
+    path: '**',
+    component: DashboardComponent,
+  },
+
 ];
 
 @NgModule({
