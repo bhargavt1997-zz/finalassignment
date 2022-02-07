@@ -1,47 +1,65 @@
-
 .container{
-    margin-top: 10px;
-    margin-left: -15px;
-    margin-right: 0px;
-  }
-  .allCourses{
-    margin-top:10px;
-    width: 110%;
-    padding-left: 150px;
-    height: 1%;
-  }
+  margin-top: 10px;
+  margin-left: -15px;
+  margin-right: 0px;
+  padding: 0;
+}
+.allCourses{
+  margin-top:10px;
+  width: 110%;
+  padding-left: 150px;
+  height: 1%;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
 
-  .btn-primary{
-      background-color: white;
-      margin-right: 30px;
-      color:black;
-  }
-  
+.btn-primary-addToWishlist{
+    background-color: #FF6738;
+    margin-right: 30px;
+    color:white;
+    border:0;
+
+}
+.btn-primary-addToCart{
+  border: 1px solid #FF6738;
+  color: #FF6738;
+  background-color: white;
+}
+
+.itemBtn{
+  background-color: white;
+  color: black;
+  margin-bottom: 10px;
+}
+
 
 .course-details{
-    float: left;
-    background-color: black;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 130%;
-    height: 50%;
-    padding-left: 150px;
-    color:white;
-  }
+  float: left;
+  background-color: black;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 130%;
+  height: 50%;
+  padding-left: 150px;
+  color:white;
+}
 
 .course-description{
-    padding-left: 150px;
+  padding-left: 150px;
 }
 
 .video{
-    float: right;
-    margin-top: -200px;
-    margin-right: -150px;
+  float: right;
+  margin-top: -200px;
+  margin-right: -150px;
 }
 
 .course-price{
-  margin-top: -200px;
-  margin-right: -150px;
-    float:right;
+margin-top: -200px;
+margin-right: -150px;
+float:right;
+width: 34%;
 }
