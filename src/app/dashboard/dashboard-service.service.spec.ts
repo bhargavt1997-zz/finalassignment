@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { DashboardServiceService } from './dashboard-service.service';
 
@@ -6,7 +8,10 @@ describe('DashboardServiceService', () => {
   let service: DashboardServiceService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports:[RouterTestingModule,HttpClientModule]
+    });
+
     service = TestBed.inject(DashboardServiceService);
   });
 

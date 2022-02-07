@@ -9,13 +9,14 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ProfileComponent implements OnInit {
 
-  experience: string = "";
+  experience: any;
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
   onChangeHandler(event: any){
+    console.log(event.target.value);
     this.experience = event.target.value;
   }
   openVerticallyCentered(content: any, event: any) {

@@ -9,28 +9,28 @@
             <div class="rowFlex">
                 <div class="col-12 ">
                     <div class="form-group name col-md-4">
-                        <label for="exampleInputPassword1">Last Name</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"
+                        <label for="Lname">Last Name</label>
+                        <input type="text" class="form-control" id="Lname"
                             placeholder="Enter Last Name">
                     </div>
                     <div class="form-group name col-md-4">
-                        <label for="exampleInputPassword1">First Name</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"
+                        <label for="Fname">First Name</label>
+                        <input type="text" class="form-control" id="Fname"
                             placeholder="Enter First Name">
                     </div>
                     <div class="form-group name col-md-4 pl-0">
-                        <label for="exampleInputEmail1">Display Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <label for="DName">Display Name</label>
+                        <input type="text" class="form-control" id="Dname" aria-describedby="emailHelp"
                             placeholder="Enter Display Name">
                     </div>
                     &nbsp; &nbsp; &nbsp;
   
                     <div class="form-group w-50">
-                        <label for="exampleFormControlTextarea1">About yourself</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="AboutYourseld">About yourself</label>
+                        <textarea class="form-control" id="AboutYourseld" rows="3"></textarea>
                     </div>
                     <div class="checkBox">
-                        <small id="emailHelp" class="form-text text-muted">Your Area of Interest</small>
+                        <small id="AreasOfInterest" class="form-text text-muted">Your Area of Interest</small>
                         <div class="form-check interest">
                             <input type="checkbox" class="form-check-input" id="check1" name="option1" value="Designer"
                                 >
@@ -42,13 +42,13 @@
                             <label class="form-check-label" for="check2">Developer</label>
                         </div>
                         <div class="form-check interest">
-                            <input type="checkbox" class="form-check-input" id="check1" name="option3"
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3"
                                 value="ProjectManager">
-                            <label class="form-check-label" for="check1">Project Manager</label>
+                            <label class="form-check-label" for="check3">Project Manager</label>
                         </div>
                         <div class="form-check interest">
-                            <input type="checkbox" class="form-check-input" id="check2" name="option4" value="Sales">
-                            <label class="form-check-label" for="check2">Sales</label>
+                            <input type="checkbox" class="form-check-input" id="check4" name="option4" value="Sales">
+                            <label class="form-check-label" for="check4">Sales</label>
                         </div>
                     </div>
                     <br>
@@ -70,30 +70,30 @@
                         </div>
                     </div>
                     <br>
-                <div class="professionalDetails" *ngIf="experience === 'option2'">
+                <div class="professionalDetails" *ngIf="experience == 'option2'">
                   <div class="box border p-2" style="border-color: #E0E0E0;" >
                     <div class="radibuttonInline">
                         <div class="profileexperience">
                             <small id="radioHelp" class="form-text text-muted">How much of experience you have?</small>
                             <div class="form-check col-md-4 experience">
                                 <input class="form-check-input" type="radio" name="radibuttonInline1"
-                                    id="radibuttonInline2" value="option2">
-                                <label class="form-check-label" for="radibuttonInline2">
+                                    id="radibuttonInline1" value="option2">
+                                <label class="form-check-label" for="radibuttonInline1">
                                     10 & above
                                 </label>
                             </div>
                             <div class="form-check col-md-4 experience">
-                                <input class="form-check-input" type="radio" name="radibuttonInline1"
-                                    id="radibuttonInline2" value="option2">
-                                <label class="form-check-label" for="radibuttonInline2">
+                                <input class="form-check-input" type="radio" name="radibuttonInline23"
+                                    id="radibuttonInline23" value="option2">
+                                <label class="form-check-label" for="radibuttonInline23">
                                     5-10
                                 </label>
                             </div>
                             <div class="form-check col-md-4 experience">
   
-                                <input class="form-check-input" type="radio" name="radibuttonInline1"
-                                    id="radibuttonInline1" value="option1" checked>
-                                <label class="form-check-label" for="radibuttonInline1">
+                                <input class="form-check-input" type="radio" name="radibuttonInline3"
+                                    id="radibuttonInline3" value="option1" checked>
+                                <label class="form-check-label" for="radibuttonInline3">
                                     0-5
                                 </label>
                             </div>
@@ -104,8 +104,8 @@
                             <small id="radioHelp" class="form-text text-muted">What is your Expertise?</small>
                             <div class="form-check col-md-4 experience">
                                 <input class="form-check-input" type="radio" name="radibuttonInline"
-                                    id="radibuttonInline1" value="option1" checked>
-                                <label class="form-check-label" for="radibuttonInline1">
+                                    id="radibuttonInline1-expertise" value="option1" checked>
+                                <label class="form-check-label" for="radibuttonInline1-expertise">
                                     Java
                                 </label>
                             </div>
@@ -118,8 +118,8 @@
                             </div>
                             <div class="form-check col-md-4 experience">
                                 <input class="form-check-input" type="radio" name="radibuttonInline"
-                                    id="radibuttonInline2" value="option2">
-                                <label class="form-check-label" for="radibuttonInline2">
+                                    id="radibuttonInline3-1" value="option2">
+                                <label class="form-check-label" for="radibuttonInline3-1">
                                     Backend
                                 </label>
                             </div>
