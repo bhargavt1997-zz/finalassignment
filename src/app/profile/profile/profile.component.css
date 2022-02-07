@@ -3,44 +3,74 @@
     flex-direction: row;
     height: 100vh;
     width: 100vw;
-}
-
-.child-1 {
+    padding: 0;
+  }
+  
+  .child-1 {
     width: 20%;
     border: 1px solid black;
     height: 10rem;
-}
-
-.child-2 {
+  }
+  
+  .child-2 {
     width: 80%;
     height: 10rem;
     /* border: 1px solid black; */
     margin-left: 10px;
-
-}
-.image{
+  
+  }
+  .image{
     height: 100%;
     width: 100%;
-}
-.rowFlex{
+  }
+  .rowFlex{
     display: flex;
     flex-direction: row;
-}
-
-.name{
+  }
+  
+  .name{
     float:right;
     width:40%;
     margin-top: 25px;
-
-}
-
-.interest{
+  
+  }
+  
+  label{
+    color: #6c757d;
+    margin-left: 8px;;
+  }
+  input, textarea{
+    background-color: #F7F8FF;
+    border: #F7F8FF;
+  }
+  .mentionRole{
+    margin-left:0;
+  }
+  .interest{
     padding-top: 10px;
-}
-.experience{
+  }
+  .experience{
     float:right;
-}
-
-.btn-primary{
+  }
+  
+  .save{
     float:right;
-}
+    background-color: rgb(241, 124, 28);
+    color: white;
+    width: 15%;
+  }
+  .modal-body{
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .modal-footer{
+    justify-content: center;
+  }
+  
+  .closeBtn{
+    background-color: #FF6738;
+    color:white;
+    width: 40%
+  }

@@ -19,8 +19,10 @@ export class DashboardServiceService {
     this.pageFrom = !this.pageFrom;
   }
   cart: any = [];
+  sortValue:any;
   wishList: any = [];
   showStar = Array(10).fill(true);
+
   updateWishList(id: number) {
     if (this.wishList.includes(id)) {
       this.wishList = this.wishList.filter((item: number) => item != id);
@@ -36,6 +38,9 @@ export class DashboardServiceService {
       this.cart.push(id);
     }
   }
+  updateSortVaribale(n:any){
+    this.sortValue=n;
+  }
 
   removeFromWishList(id: String) {
     this.wishList = this.wishList.filter((item: String) => item != id);
@@ -45,12 +50,13 @@ export class DashboardServiceService {
   }
   constructor(private http: HttpClient) {}
   public url = './assets/courses.json';
+
   getCoursesData(): Observable<courses> {
     return this.http.get<courses>(this.url);
   }
+
   emptyCart() {
     alert('Thanks for placing the order');
     this.cart=[];
-    
       }
 }
